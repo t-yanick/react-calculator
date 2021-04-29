@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 function Display({ result }) {
   return (
@@ -8,7 +8,7 @@ function Display({ result }) {
   );
 }
 
-Display.propTypes = { result: propTypes.string };
+Display.propTypes = { result: PropTypes.string };
 Display.defaultProps = { result: '0' };
 
 export default Display;
