@@ -1,8 +1,14 @@
-function App(props) {
-  return <h1>Hello</h1>
+import React from 'react';
+import ButtonPanel from './ButtonPanel';
+import Display from './Display'
+
+function App() {
+  return (
+    <React.Fragment className="App">
+      <Display />
+      <ButtonPanel />
+    </React.Fragment>
+  );
 }
 
-ReactDOM.render(
-  <Display />,
-  document.getElementById('root')
-);
+export default App;
