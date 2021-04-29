@@ -1,10 +1,7 @@
 <p align="center">
-     <a href="https://github.com/t-yanick/react-calculator/">
-    <img src="assets/readme/microverse.png" alt="Logo" width="80" height="80">
-  </a>
-
   <h3 align="center">React Calculator</h3>
 </p>
+
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
