@@ -1,7 +1,7 @@
 import React from 'react';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
-import Calculate from '../logic/Calculate';
+// import Calculate from '../logic/Calculate';
 
 function App() {
   return (
