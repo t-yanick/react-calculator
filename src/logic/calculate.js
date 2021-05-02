@@ -1,4 +1,5 @@
-//eslint-disable-import/extensions
+// eslint-disable-import/extensions
+
 import Operate from './Operate';
 
 export default function Calculate(dataObj, buttonName) {
