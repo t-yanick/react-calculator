@@ -1,4 +1,4 @@
-import Operate from './Operate.js';
+import Operate from './Operate';
 
 export default function Calculate(dataObj, buttonName) {
   let { total, next, operation } = dataObj;
