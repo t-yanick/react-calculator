@@ -35,6 +35,16 @@
     "arrow-parens": [
       "error",
       "as-needed"
+    ],
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "js": "never",
+        "jsx": "never"
+      }
     ]
   },
   "ignorePatterns": [
