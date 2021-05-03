@@ -18,9 +18,6 @@ function Operate(numberOne, numberTwo, operation) {
   if (operation === '÷') {
     valueArg = numOne.div(numTwo);
   }
-  if (operation === '%') {
-    valueArg = numOne.mod(numTwo);
-  }
 
   return valueArg.toString();
 }
