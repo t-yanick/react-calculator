@@ -8,9 +8,9 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      total: null,
-      next: null,
-      operation: null,
+      total: '',
+      next: '',
+      operation: '',
     };
     this.handleClick = this.handleClick.bind(this);
   }
