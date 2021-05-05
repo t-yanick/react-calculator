@@ -16,17 +16,11 @@ export default class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  // handleClick(buttonName) {
-  //   const { total, next, operation } = Calculate(this.state, buttonName);
-  //   this.setState({ total, next, operation });
-  // }
-
   handleClick(buttonName) {
     this.setState(Calculate(this.state, buttonName));
   }
 
   render() {
-    // const { total, next, operation } = this.state;
     return (
       <div className="App">
         <Display result={this.state.next || this.state.total || '0'} />
