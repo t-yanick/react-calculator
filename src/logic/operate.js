@@ -13,7 +13,7 @@ function Operate(numberOne, numberTwo, operation) {
     return one.minus(two).toString();
   }
   if (operation === '+') {
-    return one.plus(two).toString;
+    return one.plus(two).toString();
   }
   if (operation === '÷') {
     if (two == '0') {
