@@ -2,56 +2,50 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-function ButtonPanel(
-  {
-    group1, group2, group3, group4, group5,
-  },
-) {
+function ButtonPanel(props) {
+  const { clickHandler } = props;
+
+  const handleClick = buttonName => {
+    clickHandler(buttonName);
+  };
+
   return (
-    <div>
-      <div>
-        {group1.map(item => (
-          <Button name={item} key={item} />
-        ))}
+    <div className="ButtonPanel">
+      <div className="row">
+        <Button name="AC" clickHandler={handleClick} />
+        <Button name="+/-" clickHandler={handleClick} />
+        <Button name="%" clickHandler={handleClick} />
+        <Button name="÷" clickHandler={handleClick} orange />
       </div>
-      <div>
-        {group2.map(item => (
-          <Button name={item} key={item} />
-        ))}
+      <div className="row">
+        <Button name="7" clickHandler={handleClick} />
+        <Button name="8" clickHandler={handleClick} />
+        <Button name="9" clickHandler={handleClick} />
+        <Button name="X" clickHandler={handleClick} orange />
       </div>
-      <div>
-        {group3.map(item => (
-          <Button name={item} key={item} />
-        ))}
+      <div className="row">
+        <Button name="4" clickHandler={handleClick} />
+        <Button name="5" clickHandler={handleClick} />
+        <Button name="6" clickHandler={handleClick} />
+        <Button name="-" clickHandler={handleClick} orange />
       </div>
-      <div>
-        {group4.map(item => (
-          <Button name={item} key={item} />
-        ))}
+      <div className="row">
+        <Button name="1" clickHandler={handleClick} />
+        <Button name="2" clickHandler={handleClick} />
+        <Button name="3" clickHandler={handleClick} />
+        <Button name="+" clickHandler={handleClick} orange />
       </div>
-      <div>
-        {group5.map(item => (
-          <Button name={item} key={item} />
-        ))}
+      <div className="row">
+        <Button name="0" clickHandler={handleClick} wide />
+        <Button name="." clickHandler={handleClick} />
+        <Button name="=" clickHandler={handleClick} orange />
       </div>
     </div>
   );
 }
 
 ButtonPanel.propTypes = {
-  group1: PropTypes.arrayOf(PropTypes.string),
-  group2: PropTypes.arrayOf(PropTypes.string),
-  group3: PropTypes.arrayOf(PropTypes.string),
-  group4: PropTypes.arrayOf(PropTypes.string),
-  group5: PropTypes.arrayOf(PropTypes.string),
-};
-
-ButtonPanel.defaultProps = {
-  group1: ['AC', '+/-', '%', '÷'],
-  group2: ['7', '8', '9', 'X'],
-  group3: ['4', '5', '6', '-'],
-  group4: ['1', '2', '3', '+'],
-  group5: ['0', '.', '='],
+  clickHandler: PropTypes.func.isRequired,
 };
 
 export default ButtonPanel;

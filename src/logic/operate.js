@@ -1,25 +1,29 @@
 import Big from 'big.js';
 
-function Operate(numberOne, numberTwo, operation) {
-  const numOne = Big(numberOne);
-  const numTwo = Big(numberTwo);
+/* eslint-disable eqeqeq, no-else-return */
 
-  let valueArg;
+function Operate(numberOne, numberTwo, operation) {
+  const one = Big(numberOne || '0');
+  const two = Big(numberTwo || '0');
 
   if (operation === 'X') {
-    valueArg = numOne.times(numTwo);
+    return one.times(two).toString();
   }
   if (operation === '-') {
-    valueArg = numOne.minus(numTwo);
+    return one.minus(two).toString();
   }
   if (operation === '+') {
-    valueArg = numOne.plus(numTwo);
+    return one.plus(two).toString();
   }
   if (operation === '÷') {
-    valueArg = numOne.div(numTwo);
+    if (two == '0') {
+      return 'Divide by 0 error';
+    } else {
+      return one.div(two).toString();
+    }
   }
 
-  return valueArg.toString();
+  throw Error(`Unknown operation '${operation}'`);
 }
 
 export default Operate;
