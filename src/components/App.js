@@ -29,3 +29,24 @@ export default class App extends React.Component {
     );
   }
 }
+
+// const App = () => {
+//   const [total, setTotal] = useState(null);
+//   const [next, setNext] = useState(null);
+//   const [operation, setOperation] = useState(null);
+
+//   const handleClick = buttonName => {
+//     setTotal(Calculate(total, buttonName));
+//     setNext(Calculate(next, buttonName));
+//     setOperation(Calculate(operation, buttonName));
+//   };
+
+//   return (
+//     <div className="App">
+//       <Display result={next || total || '0'} />
+//       <ButtonPanel clickHandler={handleClick} />
+//     </div>
+//   );
+// };
+
+// export default App;
