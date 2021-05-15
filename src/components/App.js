@@ -1,34 +1,52 @@
 import React from 'react';
-import ButtonPanel from './ButtonPanel';
-import Display from './Display';
-import Calculate from '../logic/calculate';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './Home';
+import Calculator from './Calculator';
+import Quote from './Quote';
 
-/* eslint-disable react/destructuring-assignment, react/no-access-state-in-setstate */
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
+const App = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/Calculator" component={Calculator} />
+      <Route exact path="/Quote" component={Quote} />
+    </Switch>
+  </BrowserRouter>
+);
 
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
+export default App;
 
-  handleClick(buttonName) {
-    this.setState(Calculate(this.state, buttonName));
-  }
+// import React from 'react';
+// import ButtonPanel from './ButtonPanel';
+// import Display from './Display';
+// import Calculate from '../logic/calculate';
 
-  render() {
-    return (
-      <div className="App">
-        <Display result={this.state.next || this.state.total || '0'} />
-        <ButtonPanel clickHandler={this.handleClick} />
-      </div>
-    );
-  }
-}
+// /* eslint-disable react/destructuring-assignment, react/no-access-state-in-setstate */
+// export default class App extends React.Component {
+//   constructor(props) {
+//     super(props);
+
+//     this.state = {
+//       total: null,
+//       next: null,
+//       operation: null,
+//     };
+//     this.handleClick = this.handleClick.bind(this);
+//   }
+
+//   handleClick(buttonName) {
+//     this.setState(Calculate(this.state, buttonName));
+//   }
+
+//   render() {
+//     return (
+//       <div className="App">
+//         <Display result={this.state.next || this.state.total || '0'} />
+//         <ButtonPanel clickHandler={this.handleClick} />
+//       </div>
+//     );
+//   }
+// }
 
 // const App = () => {
 //   const [total, setTotal] = useState(null);
