@@ -3,10 +3,19 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <div>
-      <Link to="/">Home </Link>
-      <Link to="/calculator">Calculator </Link>
-      <Link to="/quote">Quote of the day </Link>
+    <div className="navbar">
+      <h1>Math Magicians</h1>
+      <ul>
+        <li>
+          <Link to="/" className="link">Home | </Link>
+        </li>
+        <li>
+          <Link to="/calculator" className="link">Calculator | </Link>
+        </li>
+        <li>
+          <Link to="/quote" className="link">Quote of the day </Link>
+        </li>
+      </ul>
     </div>
   );
 }

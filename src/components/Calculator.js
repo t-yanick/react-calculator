@@ -22,9 +22,14 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <Display result={this.state.next || this.state.total || '0'} />
-        <ButtonPanel clickHandler={this.handleClick} />
+      <div>
+        <div>
+          <h2>Time for some Maths!</h2>
+        </div>
+        <div className="App">
+          <Display result={this.state.next || this.state.total || '0'} />
+          <ButtonPanel clickHandler={this.handleClick} />
+        </div>
       </div>
     );
   }
