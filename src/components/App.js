@@ -3,9 +3,12 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import Calculator from './Calculator';
 import Quote from './Quote';
+import Navbar from './Navbar';
+import './App.css';
 
 const App = () => (
   <BrowserRouter>
+    <Navbar />
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/Calculator" component={Calculator} />
