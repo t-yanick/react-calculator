@@ -17,6 +17,9 @@
 * [Show your support](#show-your-support)
 * [Acknowledgements](#acknowledgements)
 
+## Screenshot
+![screenshot](src/assets/screenshot.png)
+
 ## Live Demo
 
 [Live Demo](https://evening-depths-45673.herokuapp.com/)
