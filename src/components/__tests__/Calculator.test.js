@@ -4,7 +4,7 @@ import Calculator from '../Calculator';
 
 test('Component renders correctly', () => {
   const component = renderer.create(
-    <Calculator />
+    <Calculator />,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

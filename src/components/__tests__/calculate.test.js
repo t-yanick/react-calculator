@@ -26,7 +26,7 @@ describe('User can enter a number', () => {
     expect(result.next).toEqual('6');
     buttonName = '2';
     result = calculate(result, buttonName);
-    expect(result.next).toEqual('62')
+    expect(result.next).toEqual('62');
   });
 });
 
@@ -48,9 +48,9 @@ describe('User can enter a decimal number', () => {
     expect(result.next).toEqual('6');
     buttonName = '.';
     result = calculate(result, buttonName);
-    buttonName = '2'
+    buttonName = '2';
     result = calculate(result, buttonName);
-    expect(result.next).toEqual('6.2')
+    expect(result.next).toEqual('6.2');
   });
 });
 
@@ -63,6 +63,6 @@ describe('User can enter a negative number', () => {
     expect(result.next).toEqual('6');
     buttonName = '+/-';
     result = calculate(result, buttonName);
-    expect(result.next).toEqual('-6')
+    expect(result.next).toEqual('-6');
   });
 });

@@ -4,7 +4,7 @@ import Quote from '../Quote';
 
 test('Component renders correctly', () => {
   const component = renderer.create(
-    <Quote />
+    <Quote />,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

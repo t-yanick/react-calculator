@@ -4,7 +4,7 @@ import Home from '../Home';
 
 test('Component renders correctly', () => {
   const component = renderer.create(
-    <Home />
+    <Home />,
   );
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
