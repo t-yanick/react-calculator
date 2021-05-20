@@ -13,7 +13,7 @@ function Button(props) {
   const className = [
     'Button',
     (name === '÷' || name === 'X' || name === '-' || name === '+' || name === '=') ? color : 'gray',
-    wide ? 'doubleButton' : '',
+    wide ? 'doubleButton' : ' ',
   ];
 
   return (
@@ -27,11 +27,14 @@ function Button(props) {
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
-  wide: PropTypes.bool.isRequired,
+  wide: PropTypes.bool,
   color: PropTypes.string,
   clickHandler: PropTypes.func.isRequired,
 };
 
-Button.defaultProps = { color: 'orange' };
+Button.defaultProps = {
+  color: 'orange',
+  wide: false,
+};
 
 export default Button;
