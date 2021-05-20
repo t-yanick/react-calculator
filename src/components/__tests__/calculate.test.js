@@ -66,3 +66,16 @@ describe('User can enter a negative number', () => {
     expect(result.next).toEqual('-6');
   });
 });
+
+describe('User can get percentages in decimal', () => {
+  test('When user presses (%)', () => {
+    let buttonName = '6';
+    let result = calculate({
+      total: null, next: null, operation: null,
+    }, buttonName);
+    expect(result.next).toEqual('6');
+    buttonName = '%';
+    result = calculate(result, buttonName);
+    expect(result.next).toEqual('0.06');
+  });
+});
